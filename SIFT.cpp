@@ -1,13 +1,8 @@
 #include <opencv2/opencv.hpp>
 
-void gaussianblur(const cv::Mat& image)
+int main(int argc, char* argv)
 {
-    cv::namedWindow("gaussianblur-in", cv::WINDOW_AUTOSIZE);
-    cv::namedWindow("gaussianblur-out", cv::WINDOW_AUTOSIZE);
+    cv::Mat inputimage = cv::imread(/home/yurik/Pictures/lena512color.tiff);
 
-    cv::imshow("gaussianblur", image);
 
-    cv::Mat out;
-
-    cv::GaussianBlur(image, out, cv::Size(5,5), 3, 3);
 }
