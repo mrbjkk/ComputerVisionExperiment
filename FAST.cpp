@@ -9,7 +9,7 @@ void trackBar(int, void*);
 
 int main(int argc, char** argv)
 {
-    src = imread("/home/yurik/Pictures/lena512color.tiff");
+    src = imread("/home/yurik/Documents/Program/brisk/images/img1.ppm");
     if (src.empty())
     {
         printf("can not load image \n");
