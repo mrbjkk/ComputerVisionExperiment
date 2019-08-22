@@ -26,12 +26,24 @@ int main(int argc, char* argv[])
 
     // paper's di
     cv::Mat dDownsampleout;
-    cv::pyrDown(img, dDownsampleout, cv::Size(img.cols/1.5, img.rows/1.5));
-    for(int i = 1; i < 5; i++)
+    cv::pyrDown(img, dDownsampleout, cv::Size(img.cols/2, img.rows/2));
+//    for(int i = 1; i < 5; i++)
+//    {
+//        dDownOut.emplace_back(dDownsampleout);
+//        cv::pyrDown(dDownsampleout, dDownsampleout, cv::Size(dDownsampleout.cols/2, dDownsampleout.rows/2));
+//    }
+
+    // imshow
+    for (int i = 0; i < cDownOut.size(); i++)
     {
-        dDownOut.emplace_back(dDownsampleout);
-        cv::pyrDown(dDownsampleout, dDownsampleout, cv::Size(dDownsampleout.cols/2, dDownsampleout.rows/2));
+        cv::imshow("test"+i, cDownOut[i]);
     }
+//    for (int i = 0; i < dDownOut.size(); i++)
+//    {
+//        cv::imshow("dore"+i, dDownOut[i]);
+//    }
+
+
     //    cv::Mat outputGaussian;
     //    cv::GaussianBlur(img, outputGaussian, cv::Size(4,3), 0, 0);
 //    for(int i = 3; i < 10; i = i + 2)
